@@ -12,6 +12,7 @@ public class Demo1 {
 		//list.add("amit");
 		//list.add(0,"ram");
 		System.out.println(list);
+		System.out.println("Size is "+list.size());
 		//list.remove(1);
 		System.out.println(list);
 		System.out.println(list.get(0));  // list[0]
