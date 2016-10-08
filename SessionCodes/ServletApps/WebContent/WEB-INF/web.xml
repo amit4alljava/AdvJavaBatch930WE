@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>MyWebApp</display-name>
+	<filter>
+		<description>
+		</description>
+		<display-name>SessionCheckFilter</display-name>
+		<filter-name>SessionCheckFilter</filter-name>
+		<filter-class>com.tcs.shopping.SessionCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionCheckFilter</filter-name>
+		<url-pattern>*.amit</url-pattern>
+	</filter-mapping>
+	<servlet>
+		
+		<servlet-name>WelcomeServlet</servlet-name>
+		<servlet-class>com.tcs.shopping.WelcomeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.tcs.shopping.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>SessionServlet</display-name>
+		<servlet-name>SessionServlet</servlet-name>
+		<servlet-class>com.tcs.shopping.SessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/welcome.amit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SessionServlet</servlet-name>
+		<url-pattern>/SessionServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		
+	</welcome-file-list>
+	<session-config>
+	<session-timeout>5</session-timeout>
+	</session-config>
+</web-app>
