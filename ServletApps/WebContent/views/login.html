@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script>
+		function pickcolor(){
+			console.log("Color is "+document.getElementById("favcolor").value);
+			if(localStorage){
+			localStorage.favcolor=document.getElementById("favcolor").value;
+			
+				}
+			else{
+				alert("Ur Browser Not Support LocalStorage...");
+				}
+			
+			
+			}
+	</script>
+</head>
+<body>
+<h1>Login</h1>
+<form action="../login" method="post">
+	<table>
+		<tr>
+			<td><label for="">Userid</label></td>
+			<td><input type="text" name="userid" placeholder="Type Userid" /></td>
+		</tr>
+		<tr>
+			<td><label for="">Password</label></td>
+			<input type="hidden" name="branch" value="Delhi"/>
+			<td><input type="password" name="password" placeholder="Type Password" /></td>
+		</tr>
+		<tr>
+		<td>Color</td>
+		<td><input type="color" id="favcolor" name ="favcolor" onchange="pickcolor()"></td>
+		</tr>
+		<tr>
+			<td><button type="submit">Login</button></td>
+			<td><button type="reset" >Clear</button></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
