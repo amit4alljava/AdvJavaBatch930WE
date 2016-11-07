@@ -1,13 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="tcs" tagdir="/WEB-INF/tags" %>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search Screen</title>
+<tcs:head/>
 </head>
 <body>
+<tcs:calendar fieldname="doj" month="true" year="true" noOfmonth="2"/>
+<tcs:date country="IN" lang="hi"/>
 <form action="SearchController" method="get">
 <input type="text" placeholder="Type Name to Search" name="personname">
 <button type='submit'>Search</button>
